@@ -19,8 +19,8 @@ jobs:
 workflows:
   Mattia-workflow:
   	filters:
-		branches:
-        		only:
-        			- master
+		  branches:
+        only:
+          - master
 	jobs:
-      		- mattia
+    - mattia
