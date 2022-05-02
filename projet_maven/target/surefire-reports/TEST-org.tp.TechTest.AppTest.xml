@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="org.tp.TechTest.AppTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="org.tp.TechTest.AppTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="strip"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+8"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-17.0.2.0.8-1.fc35.x86_64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/mattia/Scrivania/M1/Techniques de test/technique_de_test"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/mattia/Scrivania/M1/Techniques de test/ceri-m1-techniques-de-test/projet_maven"/>
     <property name="java.vm.vendor" value="Red Hat, Inc."/>
     <property name="java.vendor.url" value="https://www.redhat.com/"/>
     <property name="path.separator" value=":"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="IT"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/mattia/Scrivania/M1/Techniques de test/technique_de_test"/>
+    <property name="user.dir" value="/home/mattia/Scrivania/M1/Techniques de test/ceri-m1-techniques-de-test/projet_maven"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="17.0.2+8"/>
     <property name="os.arch" value="amd64"/>
@@ -23,7 +23,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/mattia/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf16502934669846988592.tmp"/>
+    <property name="classworlds.conf" value="/home/mattia/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf11192864218319151463.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="jdk.debug" value="release"/>
@@ -47,7 +47,7 @@
     <property name="java.version" value="17.0.2"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.vendor" value="Red Hat, Inc."/>
-    <property name="maven.home" value="/home/mattia/Scrivania/M1/Techniques de test/technique_de_test/EMBEDDED"/>
+    <property name="maven.home" value="/home/mattia/Scrivania/M1/Techniques de test/ceri-m1-techniques-de-test/projet_maven/EMBEDDED"/>
     <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2022-01-18"/>
     <property name="java.vendor.url.bug" value="https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&amp;component=java-17-openjdk&amp;version=35"/>
@@ -55,5 +55,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="21.9"/>
   </properties>
-  <testcase classname="org.tp.TechTest.AppTest" name="testApp" time="0.007"/>
+  <testcase classname="org.tp.TechTest.AppTest" name="testApp" time="0.011"/>
 </testsuite>
