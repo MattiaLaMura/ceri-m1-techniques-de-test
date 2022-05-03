@@ -8,7 +8,10 @@ jobs:
       - checkout
       - run:
           name: Move in the good directory
-          command: cd ./projet_maven
+          command: cd projet_maven
+      - run:
+          name: Check directory
+          command: echo "$PWD"
       - run:
           name: Build
           command: mvn -B -DskipTests clean package
