@@ -13,6 +13,9 @@ jobs:
           name: Check directory
           command: echo "$PWD"
       - run:
+          name: Check files
+          command: ls -a
+      - run:
           name: Build
           command: mvn -B -DskipTests clean package
       - run:
