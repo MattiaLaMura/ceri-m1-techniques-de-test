@@ -3,24 +3,15 @@ version: 2.1
 jobs:
   build-and-test:
     docker:
-      - image: cimg/openjdk:11.0
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
-          name: Move in the good directory
-          command: cd projet_maven
-      - run:
-          name: Check directory
-          command: echo "$PWD"
-      - run:
-          name: Check files
-          command: ls -a
-      - run:
           name: Build
-          command: mvn -B -DskipTests clean package
+          command: cd projet_maven && mvn -B -DskipTests clean package
       - run:
           name: Test
-          command: mvn test
+          command: cd projet_maven && mvn test
 
 workflows:
   mattia-maven-workflow:
