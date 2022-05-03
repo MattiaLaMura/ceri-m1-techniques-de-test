@@ -1,18 +1,29 @@
 version: 2.1
 
-orbs:
-  maven: circleci/maven@1.3.0
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/openjdk:11.0
+    steps:
+      - checkout
+      - run:
+          name: Move in the good directory
+          command: cd ./projet_maven
+      - run:
+          name: Build
+          command: mvn -B -DskipTests clean package
+      - run:
+          name: Test
+          command: mvn test
 
 workflows:
-    mattia-maven-test:
-      jobs:
-        - maven/test:
-            app_src_directory: projet_maven 
-            test_results_path: projet_maven/target/surefire-reports
-            filters:
-              branches:
-                only:
-                  - master
+  mattia-maven-workflow:
+    jobs:
+      - build-and-test:
+          filters:
+            branches:
+              only:
+                - master
 
         
     
