@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="org.tp.TechTest.AppTest" time="0.011" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="org.tp.TechTest.AppTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="strip"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -23,7 +23,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/mattia/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf11192864218319151463.tmp"/>
+    <property name="classworlds.conf" value="/home/mattia/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf16768850914348476330.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="jdk.debug" value="release"/>
@@ -55,5 +55,12 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="21.9"/>
   </properties>
-  <testcase classname="org.tp.TechTest.AppTest" name="testApp" time="0.011"/>
+  <testcase classname="org.tp.TechTest.AppTest" name="testApp" time="0">
+    <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at org.tp.TechTest.AppTest.testApp(AppTest.java:36)
+</failure>
+  </testcase>
 </testsuite>

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: org.tp.TechTest.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE!
+testApp(org.tp.TechTest.AppTest)  Time elapsed: 0 sec  <<< FAILURE!
+junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at org.tp.TechTest.AppTest.testApp(AppTest.java:36)
+
