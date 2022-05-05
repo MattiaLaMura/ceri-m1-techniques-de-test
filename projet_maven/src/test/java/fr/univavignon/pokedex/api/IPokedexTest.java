@@ -2,10 +2,12 @@ package fr.univavignon.pokedex.api;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import org.junit.Before;
@@ -60,6 +62,46 @@ public class IPokedexTest {
 		when(iPokedexMock.getPokemons()).thenReturn(pokemons);
 		
 		assertEquals(pokemons,iPokedexMock.getPokemons());
+	}
+	
+	@Test
+	public void testGetPokemonsSorted() {
+		Pokemon aquali = new Pokemon(0, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
+		Pokemon bulbizarre = new Pokemon(1, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+		
+		when(iPokedexMock.getPokemons(any())).thenAnswer(input -> {
+			Comparator<Pokemon> order = input.getArgument(0);
+			List<Pokemon> pokemons = new ArrayList<Pokemon>();
+			if(order == PokemonComparators.NAME) {
+				pokemons.add(aquali);
+				pokemons.add(bulbizarre);
+				return pokemons;
+			} else if(order == PokemonComparators.CP) {
+				pokemons.add(aquali);
+				pokemons.add(bulbizarre);
+				return pokemons;
+			} else {
+				pokemons.add(bulbizarre);
+				pokemons.add(aquali);
+				return pokemons;
+			}
+		});
+
+		List<Pokemon> sortedPokemons = new ArrayList<Pokemon>();
+		sortedPokemons.add(aquali);
+		sortedPokemons.add(bulbizarre);
+	    assertEquals(sortedPokemons.get(0).getName(), iPokedexMock.getPokemons(PokemonComparators.NAME).get(0).getName());
+
+	    sortedPokemons.clear();
+	    sortedPokemons.add(aquali);
+	    sortedPokemons.add(bulbizarre);
+	    assertEquals(sortedPokemons.get(0).getCp(), iPokedexMock.getPokemons(PokemonComparators.CP).get(0).getCp());
+
+	    sortedPokemons.clear();
+	    sortedPokemons.add(bulbizarre);
+	    sortedPokemons.add(aquali);
+	    assertEquals(sortedPokemons.get(0).getIndex(), iPokedexMock.getPokemons(PokemonComparators.INDEX).get(0).getIndex());
+
 	}
 
 }
