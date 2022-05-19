@@ -8,4 +8,4 @@
 
 [![codecov](https://codecov.io/gh/MattiaLaMura/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=EI7WTSZA5M)](https://codecov.io/gh/MattiaLaMura/ceri-m1-techniques-de-test)
 
-![Codecov](target/site/badges/checkstyle-result.svg)
+![Codecov](projet_maven/target/site/badges/checkstyle-result.svg)
