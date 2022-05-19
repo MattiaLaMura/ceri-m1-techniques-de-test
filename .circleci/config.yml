@@ -16,6 +16,9 @@ jobs:
           name: Test
           command: cd projet_maven && mvn test
       - codecov/upload
+      - run:
+          name: CheckStyle
+          command: mvn checkstyle:checkstyle
 
 workflows:
   mattia-maven-workflow:
