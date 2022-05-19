@@ -58,6 +58,51 @@
 	        </execution>
 	    </executions>
 	 </plugin>
+	 <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.1.2</version>
+				<executions>
+					<execution>
+						<id>id.chechstyle</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>checkstyle</goal>
+						</goals>
+						<configuration>
+							<configuration>
+								<configLocation>checkstyle.xml</configLocation>
+								<encoding>UTF-8</encoding>
+								<consoleOutput>true</consoleOutput>
+								
+								<linkXRef>false</linkXRef>
+								<outputDirectory>target/site</outputDirectory>
+							</configuration>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+ 			<groupId>com.github.bordertech.buildtools</groupId>
+			<artifactId>badger</artifactId>
+			<version>1.0.0</version>
+			<executions>
+				<execution>
+					<phase>compile</phase>
+					<goals>
+						<goal>badges</goal>
+					</goals>
+					<configuration>
+						<outputDir>target/site/badges</outputDir>
+						<inputFiles>
+							<inputFile>target/checkstyle-result.xml</inputFile>
+						</inputFiles>
+						
+					</configuration>
+				</execution>
+			</executions>
+ 		</plugin>
   </plugins>
   </build>
   
